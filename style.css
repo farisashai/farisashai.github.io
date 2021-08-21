@@ -1,101 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap');
+
 * {
-	vertical-align: baseline;
-	font-weight: inherit;
-	font-family: inherit;
-	font-style: inherit;
-	font-size: 10px;
-	border: 0 none;
-	outline: 0;
 	padding: 0;
 	margin: 0;
+	font-family: 'Urbanist', sans-serif;
 }
 
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 22px;
-	font-style: normal;
-}
-
-.home {
-	height: 100vh;
-  width: 100vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  background-color: black;
-}
-
-.container {
-  width: 95vw;
-	height: 90vh;
-	display: flex;
-	z-index: 1;
-  justify-content: center;
-	align-items: center;
-	text-align: center;
+.no-select {
+	pointer-events: none;
+	-webkit-touch-callout: none; 
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
 }
 
 canvas {
-	position: absolute;
+	position: fixed;
 	width: 100vw;
 	height: 100vh;
 	z-index: 0;
 }
 
+.container {
+	position: relative;
+	padding: 5rem 5rem 0 5rem;
+	width: calc(100vw - 10rem);
+	text-align: center;
+}
+
 .links {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 2rem;
-  z-index: 999;
+	display: flex;
+	margin: 2rem 0;
+	width: 100%;
+	justify-content: center;
 }
 
-h1, h2 {
-  color: white;
+.link {
+	margin: 0 10px;
 }
 
-.box {
-  border: 2px solid white;
-	box-shadow: 0 0 10px #9ecaed;
-	padding: 2rem;
-	margin: 0 6rem;
+h1, h2, i {
+	color: #fff;
 }
 
-.home-title {
-	text-transform: uppercase;
-	font-size: 100px;
-	font-weight: 500;
+h1 {
+	font-size: 80px;
+	font-weight: 800;
 }
 
-.home-subtitle {
-  font-size: 30px;
+h2 {
+	font-size: 30px;
 }
 
-.no-select {
-	pointer-events: none;
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Old versions of Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none;
-}
-
-.fab,
-.fas,
-.far {
-	margin: 1rem;
-	color: rgb(209, 209, 209);
+i:hover {
+	color: #9fffcb;
 	transition: 0.2s ease-in-out;
 }
-
-.fab:hover,
-.fas:hover,
-.far:hover {
-	color: rgb(255, 255, 255);
-}
-
-a:visited { text-decoration: none; color: black}
-a:hover { text-decoration: none; color:black; }
-a:focus { text-decoration: none; color:black; }
-a:active { text-decoration: none; color:black; }
